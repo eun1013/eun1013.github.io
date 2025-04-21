@@ -1,0 +1,104 @@
+@charset "UFT-8";
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px;
+}
+
+/* 책 */
+
+.book > .page{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.book > .page > div{
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translatez(25px);
+    backface-visibility: hidden;
+}
+.book > .page > .front{
+    background-image: url(../images/yes24/front.jfif);
+    background-size: cover;
+}
+.book > .page > .back{
+    background-image: url(../images/yes24/back.jfif);
+    background-size: cover;
+    transform: rotateY(180deg) translateZ(25px);
+}
+.book > .side{
+    left: -25px;
+    width: 50px;
+    height: 300px;
+    background-image: url(../images/yes24/side.jfif);
+    background-size:50px 300px;
+    transform: rotateY(-90deg);
+}
+.book{
+    transform-style: preserve-3d;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transition: all 0.5s;
+    /* transform: rotateY(45deg); */
+    box-shadow:10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+/* .book:hover */
+.book:not(.flipped):hover{
+    transform: rotateY(40deg);
+}
+.flipped{
+    transform: rotateY(180deg);
+}
+.front, .back, .side{
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+
+/* 책아래 */
+.bo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+.bo > span, .we{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.4rem;
+    width: 40px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    border: 1px solid #aaa;
+    margin: 5px;
+}
+
+/* 오른쪽 페이지*/
+.right{
+    width: 500px;
+    height: 100px;
+    border: 2px solid #000;
+}
+.right > .ye > p{
+    font-size: 0.4rem;
+}
+.right > .ye > p > span{
+    width: 20px;
+    height: 10px;
+}
+.right > .ye > p > span:nth-of-type(1){
+    border-right: 1px solid #aaa;
+}
+.right > .ye > p > span:nth-of-type(2){
+    border-right: 1px solid #aaa;
+}

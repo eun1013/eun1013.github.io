@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>yes24 북</title>
+
+</head>
+<body>
+    <div class=left>
+    <div class="book">
+        <div class="page">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="side"></div>
+    </div>
+    <script>
+        const book = document.querySelector(".book");
+        book.addEventListener("click",()=>{
+            book.classList.toggle("flipped");
+        });
+    </script>
+    <div class="bo">
+        <span>미리보기</span>
+        <span>사이즈비교</span>
+        <span>공유하기</span>
+    </div>
+    </div>
+    <div class="right">
+    <div class="we">
+        <span>소득공제</span>
+    </div>
+    <div class="ye">
+        <h4>[예스리커버] 저속노화 식사법</h4>
+        <p>
+            <span>정희원 저</span>
+            <span>테이스트북스</span>
+            <span>2024년 07월 26일</span>
+        </p>
+    </div>
+</div>
+</body>
+</html>
