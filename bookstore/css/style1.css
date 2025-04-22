@@ -131,10 +131,11 @@ section#detail > .two > div > p > span{
     transition: all 0.5s;
     /* transform: rotateY(45deg); */
     box-shadow:10px 10px 20px rgba(0, 0, 0, 0.5);
+    cursor: url(../images/arow-2.png);
 
 }
 .book:hover{
-    cursor: url(../images/arow-2.png)
+    cursor: url(../images/arow-2.png);
 }
 .book:not(.flipped):hover{
     transform: rotateY(40deg);
