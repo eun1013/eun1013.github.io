@@ -134,7 +134,7 @@ section#detail > .two > div > p > span{
 
 }
 .book:hover{
-    cursor: url(../images/Untitled-2-01.png);
+    cursor: url(../images/arow-2.png)
 }
 .book:not(.flipped):hover{
     transform: rotateY(40deg);
