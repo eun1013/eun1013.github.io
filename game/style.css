@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
+
+*{margin: 0; padding: 0;}
+
+ul,li{list-style: none;}
+
+body{
+    font-family: "Gasoek One", sans-serif;
+    height: 100vh;
+    background-color: #bbb;
+    position: relative;
+}
+header{
+    width: 300px;
+    height: 550px;
+    background-color: #FEE8B9;
+    border-radius: 30px;
+    border: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block; /*확인하기*/
+}
+header > h1{
+    margin-top: 3rem;
+    margin-bottom: 130px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.5rem; 
+    color: #733A11;
+}
+header > img{
+    width: 80px;
+    position: absolute;
+    top: 36%;
+    right: 15%;
+}
+header > #start{
+        width: 200px;
+        display: flex;
+        margin: 0 auto;
+        padding: 0.6rem;
+        text-align: center;
+        border: 2px solid #733A11;
+        font-size: 0.7rem;
+        border-radius: 5px;
+        
+}
+header > #btn-start{
+    width: 120px;
+    height: 45px;
+    font-size: 1.5rem;
+    font-weight: 100;
+    display: flex;
+    margin: 2rem auto;
+    background-color: #733A11;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: "Gasoek One", sans-serif;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+main{
+    width: 300px;
+    height: 550px;
+    background-color: #FEE8B9;
+    border-radius: 30px;
+    border: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+main > h2{
+    text-align: center;
+    margin: 1rem;
+    font-weight: 300;
+}
+
+main > .talky > li:nth-child(odd){
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 250px;
+    height: 50px;
+    background-color: #FEE8B9;
+    border:1px solid #000;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+main > .talky > li:nth-child(even){
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 250px;
+    height: 50px;
+    background-color: #733A11;
+    border:1px solid #000;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+main > .talky > li:nth-child(even){
+    justify-content: flex-end;
+}
+
+main > .talky >li:nth-child(odd)::before{
+    content: '';
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 3px 5px;
+    background-image: url(./images/talky.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+main > .talky > li:nth-child(even)::after{
+    content: '';
+    display: inline-block;    
+    width: 43px;
+    height: 43px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 3px 5px;
+    background-image: url(./images/me.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+main > .me > .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: #000;
+    font-weight: 100;
+}
+
+
+main > .footer{
+    width: 300px;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+} 
+
+main > .footer > input{
+    width: 180px;
+    margin-left: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #8D8D8D;
+}
+main > .footer > .data {
+    width: 40px;
+    height: 30px;
+    background-color: #733A11;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+}
+main > .footer > i{
+    font-size: 1.3rem;
+}
