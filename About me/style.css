@@ -1,0 +1,103 @@
+@charset "UFT-8";
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
+        *{margin: 0; padding: 0;}
+
+        body{
+            width: 100%;
+            height: 100vh;
+            font-family: "Gowun Batang", serif;
+        }
+        .background{
+            width: 100%;
+            height: 100vh;
+            background-image: url(./images/back1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            width: 1400px;
+            height: 590px;
+            background-color: #eee;
+            /* display: block;
+            justify-content: center; */
+            position: relative;
+        }
+        .main > h1{
+            font-size: 7rem;
+            font-weight: bolder;
+            margin: 0.5rem 4rem;
+            color:#749DBA ;
+        }
+        .main > p:nth-child(2){
+            font-size: 1rem;
+            margin: 0 4rem;
+            color:#749DBA;
+        }
+        .main > button:nth-child(3){
+            margin-left: 200px;
+            margin-right: 10px;
+        }
+        .main > button{
+            border: none;
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: #749DBA;
+        }
+        .main > .slider{
+            width: 1200px;
+            position: absolute;
+            top: 16rem;
+            left: 200px;
+            overflow-x: hidden;
+        }
+        .main >.slider> .img-list{
+            width: 1750px;
+            display: flex;
+            justify-content: left;
+        }
+        .main > .slider> .img-list > div > img{
+            width: 350px;
+            height: 420px;
+            /* filter: blur(1px); */
+        }
+        .main > .slider> .img-list > div{
+            width: 350px;
+            height: 420px;
+            position: relative;
+            top: 0;
+            left: 0;
+            overflow-y: hidden;
+        }
+        .main > .slider> .img-list > div > p{
+            width: 350px;
+            height: 420px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0 , 0, 0, 0.2);
+            text-align: center;
+            font-weight: 600;
+        }
+        .main .img-1 p{
+            padding-top: 10rem;
+        }
+        .main .img-2 p{
+            padding-top:  8rem;
+        }
+        .main .img-3 p{
+            padding-top: 9rem;
+        }
+        .main .img-4 p{
+            padding-top:  10rem;
+        }
+        .main .img-5 p{
+            padding-top:  8rem;
+        }
+        .main .img-list p{
+            opacity: 0;
+        }
