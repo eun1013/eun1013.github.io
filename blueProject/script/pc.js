@@ -60,7 +60,8 @@ $aboutMsg.forEach((msg)=>{
             trigger: msg,
             containerAnimation:horizonScroll, //가로스크롤일 경우 꼭 넣어야지 실행된다.
             start:"left 80%",
-            toggleActions:"play reverse play reverse"
+            toggleActions:"play reverse play reverse" 
+            //↑↑스타트영역에 들어오면 시작을 시키고 애니메이션이 끝나면 원상복귀를 시킨다. 다시 되돌렸을 때 실행을 시켜라!
         }
     });
 });
@@ -80,23 +81,83 @@ $keywordList.forEach((elem,idx)=>{
     })
 });
 
+// project 이동 gsap애니 (계단식 애니메이션) 공통으로 사용되는 것을 함수로 만들기
+const fromTop = (elem,posY)=>{
+    gsap.from(elem,{
+        y: 200,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: elem,
+            start: `top ${posY}%`,
+            end: "top 25%",
+            scrub: true
+        }
+    });
+};
 // project 안에 card item을 계단 형식으로 애니메이션 처리 (첫번째)
 const $project = document.querySelectorAll("#projects > .nomal");
 $project.forEach((article)=>{
     const $item = article.querySelectorAll(".item");
     $item.forEach((item,idx)=>{
         let posY = 90 - idx*15;
-        gsap.from(item,{
-            y: 200,
-            opacity: 0,
-            duration: 1,
-            scrollTrigger:{
-                trigger: item,
-                start: `top ${posY}%`,
-                end: "top 25%",
-                scrub: true,
-                markers: true
-            }
-        });
+        fromTop(item,posY);
+    });
+});
+
+// practice project 영역은 계단 형식으로 애니메이션 처리
+const $practice = document.querySelectorAll("#projects > .practice .item");
+$practice.forEach((item,idx)=>{
+    let posY = 70 - idx*4;
+    fromTop(item,posY);
+});
+
+// skills h2태그가 커진상태에서 작아지면서 안보이게 처리
+gsap.to("#skills > h2 ",{
+    opacity: 0,
+    scale : 0.5,
+    duration: 2,
+    scrollTrigger:{
+        trigger:"#skills",
+        start: "top 50%",
+        toggleActions:"play reverse play reverse"
+    }
+});
+
+// skills에서 li들은 작아진 상태에서 커지게 : stagger 사용
+const $shapes = document.querySelectorAll("#skills > .skill-item > li")
+gsap.from($shapes,{
+    opacity: 1,
+    scale: 0,
+    duration: 0.5,
+    stagger: 0.3,
+    ease:"back.out",
+    scrollTrigger:{
+        trigger:"#skills",
+        start: "top 50%",
+        toggleActions:"play reverse play reverse"
+    }
+});
+
+// footer에서 아이템들이 커졌다 원상태로 복귀하기 
+const $footer = document.querySelectorAll(".footer-wrap > *");
+gsap.from($footer,{
+    scale:1.3,
+    opacity: 0,
+    duration:1,
+    stagger:0.1,
+    ease: "power2.out",
+    scrollTrigger:{
+        trigger:"footer",
+        start: "top 20%",
+        toggleActions:"play reverse play reverse"
+    }
+});
+
+//home을 누르면 제일 위로 올라가기
+const $home = document.querySelector("#logo");
+$home.addEventListener("click",()=>{
+    window.scrollTo({
+        top: 0
     });
 });
