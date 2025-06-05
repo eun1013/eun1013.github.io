@@ -1,0 +1,143 @@
+body {
+  font-family: "Paperlogy", sans-serif;
+  color: #333;
+}
+
+header {
+  width: 80%;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 2rem;
+}
+header nav ul.top {
+  color: #888;
+  font-size: 0.7rem;
+}
+header nav ul.main {
+  font-weight: 600;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+section#banner {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+section#banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+section#banner video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#banner div.title {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  color: #fff;
+  width: 500px;
+  z-index: 2;
+}
+section#banner div.title h2 {
+  font-size: 4rem;
+}
+section#banner div.title p {
+  font-weight: 100;
+  margin: 1rem 0;
+}
+section#banner div.title button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 60%;
+  padding: 10px 0;
+}
+
+section#news {
+  margin: 7rem 0;
+}
+section#news h2 {
+  text-align: center;
+}
+section#news ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 1rem auto;
+  gap: 1rem;
+}
+section#news ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+section#news ul li img {
+  width: 100%;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#news ul li h3 {
+  margin: 1rem 0;
+}
+
+footer {
+  background-color: #333;
+  color: #ddd;
+  padding: 5rem 0;
+}
+footer div {
+  width: 80%;
+  margin: 0 auto;
+}
+footer div.contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+footer div.contents ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+footer div.copyright p {
+  margin: 1rem 0;
+}
+footer div.copyright p:nth-child(1) {
+  margin-bottom: 0;
+}
+footer div.copyright p:nth-child(2) {
+  margin-top: 0;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,413 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "paybooc", sans-serif;
+  color: #3f51b5;
+}
+
+header {
+  height: 80vh;
+  width: 100%;
+  background-image: url(../images/slide01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  header {
+    height: 50vh;
+  }
+}
+header nav {
+  height: 80px;
+  background-color: #fff;
+  padding: 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+header nav .menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  header nav .menu-icon {
+    display: none;
+  }
+}
+header nav .menu-icon:hover + ul {
+  display: block;
+}
+header nav ul {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+header nav ul li {
+  width: 100%;
+  background-color: #3f51b5;
+  color: #eee;
+  padding: 0.5rem 0;
+}
+header nav ul li a {
+  width: 100%;
+  padding: 0 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  header nav ul li {
+    width: 20%;
+    padding: 0;
+    background-color: #FFF;
+    color: #3f51b5;
+  }
+}
+@media screen and (min-width: 768px) {
+  header nav ul {
+    position: static;
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+section#about {
+  margin: 2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+section#about article {
+  margin: 3rem 0;
+  padding: 3rem 0;
+}
+section#about article h2 {
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+@media screen and (min-width: 768px) {
+  section#about article h2 {
+    width: 40%;
+    border-right: 1px solid #3f51b5;
+  }
+}
+@media screen and (min-width: 768px) {
+  section#about article p {
+    text-align: left;
+    width: 60%;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  section#about article {
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
+}
+section#about ul li {
+  margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  section#about ul {
+    width: 80%;
+    margin: 3rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+section#work {
+  margin: 3rem;
+}
+section#work h2 {
+  font-size: 2rem;
+  letter-spacing: 5px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  section#work h2 {
+    width: 80%;
+    margin: 2rem auto;
+    text-align: left;
+  }
+}
+section#work article {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 768px) {
+  section#work article {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+section#work article a {
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section#work article a:nth-child(1) {
+  background-image: url(../images/work01.jpg);
+}
+section#work article a:nth-child(2) {
+  background-image: url(../images/work02.jpg);
+}
+section#work article a:nth-child(3) {
+  background-image: url(../images/work03.jpg);
+}
+section#work article a:nth-child(4) {
+  background-image: url(../images/work04.jpg);
+}
+section#work article a:nth-child(5) {
+  background-image: url(../images/work05.jpg);
+}
+section#work article a:nth-child(6) {
+  background-image: url(../images/work06.jpg);
+}
+section#work article a:nth-child(7) {
+  background-image: url(../images/work07.jpg);
+}
+section#work article a:nth-child(8) {
+  background-image: url(../images/work08.jpg);
+}
+section#work article a:hover p {
+  display: block;
+}
+section#work article a p {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: #eee;
+  padding: 1rem;
+}
+
+hr {
+  width: 20px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+section#blog {
+  width: 80%;
+  margin: 3rem auto;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  section#blog {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+section#blog h2 {
+  margin: 2rem;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  section#blog ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1rem;
+  }
+}
+section#blog ul li img {
+  width: 100%;
+}
+section#blog ul li p {
+  color: #222;
+}
+section#blog ul li p:nth-of-type(1) {
+  font-size: 0.5rem;
+}
+section#blog ul li p:nth-of-type(2) {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  section#contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 80%;
+    margin: 3rem auto;
+  }
+}
+section#contact h2 {
+  margin: 2rem;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  text-align: center;
+}
+section#contact form {
+  width: 80%;
+  margin: 1rem auto;
+}
+@media screen and (min-width: 768px) {
+  section#contact form .form-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1rem;
+  }
+}
+section#contact form .form-box div {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  section#contact form .form-box div {
+    width: 50%;
+  }
+}
+section#contact label {
+  display: block;
+  position: relative;
+  height: 2rem;
+  margin: 2rem 0;
+}
+section#contact label span {
+  position: absolute;
+  top: 0;
+  left: 3px;
+  z-index: 3;
+}
+section#contact label input, section#contact label textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid #3f51b5;
+}
+section#contact label textarea {
+  height: 500%;
+}
+section#contact button {
+  margin-top: 200px;
+  background-color: #3f51b5;
+  color: #FFf;
+  border: none;
+  outline: none;
+  padding: 20px;
+  display: block;
+  width: 40%;
+  margin-left: auto;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  section#contact button {
+    margin-top: 0;
+  }
+}
+section#contact button:hover {
+  background-color: #171e44;
+}
+
+footer p {
+  background-color: #3f51b5;
+  color: #FFF;
+  padding: 2rem 0;
+  text-align: center;
+}/*# sourceMappingURL=stlye.css.map */
