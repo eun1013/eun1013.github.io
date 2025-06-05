@@ -279,10 +279,9 @@ section#about{
     border-top: 1px solid var(--main-color);
     font-size: 1.7rem;
 }
-.item-list > .item > .item-img{
+.item-list > .item > .item-img > img{
     width: 100%;
     aspect-ratio: 1/0.5;
-    background-color: #888;
 }
 .item-list > .item > .btn{
     display: flex;

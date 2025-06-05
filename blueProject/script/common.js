@@ -10,6 +10,7 @@ const checkDevice = ()=>{
 const $prev = document.querySelector(`script[data-script]`);
     if($prev){
         $prev.remove();
+        location.reload();
     }
     const script = document.createElement("script");
     script.src = `./script/${device}.js`;
