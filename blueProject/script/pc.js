@@ -1,5 +1,4 @@
-gsap.registerPlugin(ScrollTrigger); 
-
+(function(){
 // header영역의 title(소개멘트)이 오른쪽에서 왼쪽으로 이동하게 만들기
 const $headerMsg = document.querySelectorAll("header .title li");
 gsap.from($headerMsg,{
@@ -161,3 +160,4 @@ $home.addEventListener("click",()=>{
         top: 0
     });
 });
+})();
